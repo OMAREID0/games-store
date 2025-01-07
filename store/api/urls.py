@@ -1,9 +1,9 @@
 from django.urls import path, include
-from .views import getGameByCategoryid, getGameByCategoryName, add_game, modify_game, RegisterView, LoginView, UserView, LogoutView
-
+from api import views
 
 
 urlpatterns = [
+    path('', views.home, name="home"),
     path('user/', include('api.users.urls')),
     path('category/', include('api.category.urls')),
 ]
