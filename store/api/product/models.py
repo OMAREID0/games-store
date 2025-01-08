@@ -9,7 +9,6 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     price = models.CharField(max_length=50)
-    stock = models.CharField(max_length=50)
     image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True, null=True)
     is_active = models.BooleanField(default=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, blank=True, null=True)
