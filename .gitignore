@@ -20,7 +20,7 @@
 .env.production.local
 .pyc
 /alx
-/__pycache__
+__pycache__/
 /.vscode
 
 npm-debug.log*
