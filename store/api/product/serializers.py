@@ -10,4 +10,4 @@ class ProductSerializer(serializers.ModelSerializer):
         # Model to be serialized
         model = Product
         # Fields to be serialized 
-        fields = ('id', 'name', 'description', 'price', 'stock', 'image', 'category') 
+        fields = ('id', 'name', 'description', 'price', 'image', 'category') 
