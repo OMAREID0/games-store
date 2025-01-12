@@ -4,12 +4,13 @@ from . import views
 
 
 
-router = routers.DefaultRouter()
-router.register(r'add', views.CategoryAddViewSet )
 
+
+router = routers.DefaultRouter()
+router.register(r'', views.CategoryViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('', include(router.urls)),  # Include the DefaultRouter URLs
     path('id/<int:category_id>/', views.CategoryDetailByIdApiView.as_view(), name='Category by id'),
     path('category_name/<str:category_name>/', views.CategoryDetailByNameApiView.as_view(), name='Category by category'),
 ]
